@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "v9RcZpEIgg2g0ac0n",
+            });
+        })();
+    </script>
+    <script src="appointment.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="logo.jpeg" alt="Logo"> Vedant Dental and Aesthetic Center
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                        Book Appointment
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div>
+            <strong>
+                <h1>Welcome to Vedant Dental and Aesthetic Center</h1>
+                <p>Where Your Smile Meets Art and Science</p>
+                <p>Book your appointment today and take the first step towards a brighter, healthier smile.</p>
+            </strong>
+        </div>
+    </header>
+    <section class="content-section text-center">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p><strong>Comprehensive Care:</strong> From routine check-ups to advanced cosmetic procedures, we offer a
+                full range of services to keep your smile healthy and beautiful.</p>
+            <p><strong>State-of-the-Art Technology:</strong> We utilize the latest technology to ensure precise and
+                comfortable treatments.</p>
+            <p><strong>Personalized Treatment Plans:</strong> Every smile is unique, and so is our approach to your
+                dental care. We design personalized plans that fit your lifestyle and goals.</p>
+            <p><strong>Aesthetic Excellence:</strong> Our aesthetic treatments are designed to enhance your natural
+                beauty, giving you the confidence to smile more.</p>
+        </div>
+    </section>
+
+
+    <!-- Content Sections -->
+    <div id="about" class="section container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="1.jpeg" alt="About Us Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>At Vedant Dental and Aesthetic Center, we are committed to providing exceptional dental and aesthetic
+                    care with a focus on your comfort and well-being. Established with the mission to deliver the
+                    highest quality care, our team of skilled professionals combines expertise with the latest
+                    technology to offer a comprehensive range of dental and cosmetic treatments.</p>
+                <p>Our mission is to enhance your smile and confidence through personalized care and advanced treatment
+                    options. We strive to make every visit a pleasant experience, and we are dedicated to addressing
+                    your unique needs with a compassionate approach.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section container py-5">
+        <div class="row">
+            <div class="col-md-6 order-md-2">
+                <img src="5.jpeg" alt="Our Services Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 order-md-1">
+                <h2>Our Services</h2>
+                <p>Comprehensive Care: From routine check-ups to advanced cosmetic procedures, we offer a full range of
+                    services to keep your smile healthy and beautiful.</p>
+                <p>State-of-the-Art Technology: We utilize the latest technology to ensure precise and comfortable
+                    treatments.</p>
+                <p>Personalized Treatment Plans: Every smile is unique, and so is our approach to your dental care. We
+                    design personalized plans that fit your lifestyle and goals.</p>
+                <p>Aesthetic Excellence: Our aesthetic treatments are designed to enhance your natural beauty, giving
+                    you the confidence to smile more.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="4.jpeg" alt="Contact Us Image" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2>Contact Us</h2>
+                <p>If you have any questions or would like to schedule an appointment, please reach out to us. We look
+                    forward to assisting you and making your visit as comfortable as possible.</p>
+                <p>instagram: <a
+                        href="https://www.instagram.com/the_lefthanded_dentist">https://www.instagram.com/the_lefthanded_dentist</a>
+                </p>
+                <p>Phone: <a href="tel:+1234567890">+91 9811957870</a></p>
+                <p>Address: C-216, Block C, Kendriya Vihar, Sector 51, Noida, Uttar Pradesh 201301</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="appointmentModal" tabindex="-1" role="dialog" aria-labelledby="appointmentModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="appointmentModalLabel">Book Your Appointment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="appointmentForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" name="fullName"
+                                placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <input type="time" class="form-control" id="time" name="time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reason">Reason for Visit</label>
+                            <textarea class="form-control" id="reason" name="reason" rows="3"
+                                placeholder="Briefly describe the reason for your visit" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Additional Notes</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="3"
+                                placeholder="Any additional information or requests"></textarea>
+                        </div>
+                        <button class="btn-primary" type="button" onclick="sendMail()">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Dental Clinic. All rights reserved.</p>
+            <p>Contact us at <a href="mailto:vedantdac@gmail.com">vendantdac@gmail.com</a></p>
+            <div class="map">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe
+                        src=https://www.google.com/maps/place/Veermata+Jijabai+Bhosale+Botanical+Udyan+and+Zoo/@18.9788636,72.6820952,12z/data=!4m9!1m2!2m1!1snaval+employee+union+!3m5!1s0x3be7ce36ee34d0a1:0x623099a68d41b780!8m2!3d18.9788693!4d72.8344708!16zL20vMDIwcjk0?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
